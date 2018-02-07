@@ -701,7 +701,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    // DON'T do this for testing b/c XMLHttpRequest is mocked, not XDomainRequest.
 	    if (("production") !== 'test' &&
 	        typeof window !== 'undefined' &&
-	        window.XDomainRequest && !('withCredentials' in request) &&
+	        window.XDomainRequest && !('withCredentials' in config) &&
 	        !isURLSameOrigin(config.url)) {
 	      request = new window.XDomainRequest();
 	      loadEvent = 'onload';
